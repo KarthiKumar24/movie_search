@@ -9,6 +9,11 @@ const Container = styled.div`
   padding: 20px 30px;
   justify-content: center;
   border-bottom: 1px solid lightgray;
+
+  @media (max-width:425px){
+  display:flex;
+  flex-direction:column;
+  }
 `;
 
 const CoverImage = styled.img`
@@ -51,6 +56,13 @@ const Close = styled.span`
   font-weight: bold;
   cursor: pointer;
   margin-left: 10px;
+
+  @media (max-width:425px){
+    position: absolute;
+    right: 0;
+    top: 170px;
+    margin: 10px;
+  }
 `;
 
 const MovieInfoComponent = (props) => {
