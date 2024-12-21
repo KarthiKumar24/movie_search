@@ -21,6 +21,11 @@ const Header = styled.div`
   font-size: 25px;
   font-weight: bold;
   box-shadow: 0 3px 6px 0 #555;
+
+  @media (max-width: 425px) {
+    display: block;
+  }  
+  
 `;
 const AppName = styled.div`
   display: flex;
@@ -32,7 +37,9 @@ const MovieImage = styled.img`
   width: 48px;
   height: 48px;
   margin: 15px;
+  background-color:red;
 `;
+
 const SearchBox = styled.div`
   width: 500px;
   display: flex;
@@ -40,6 +47,16 @@ const SearchBox = styled.div`
   flex-direction: row;
   background-color: white;
   border-radius: 10px;
+
+  // @media (max-width:320px){
+  //   width: 260px;
+  // }
+  // @media (min-width:370px){
+  //   width:320px;
+  // }
+  @media (max-width:426px){
+    width:clamp(16.25rem, -2.8409rem + 95.4545vw, 22.8125rem);
+  }
 `;
 const SearchIcon = styled.img`
   width: 30px;
@@ -97,7 +114,7 @@ function App() {
     <Container>
       <Header>
         <AppName>
-          <MovieImage src="/popcorn.svg" alt="Logo" />Blubie Buff
+          <MovieImage src="/images/popcorn.svg" alt="Logo" />Blubie Buff
         </AppName>
         <SearchBox>
           <SearchIcon src="/searchicon.svg" />
